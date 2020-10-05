@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+{% block header %}
+    {% include 'header.html' %}
+{% endblock %}
+
+{% block main %}
+    {% load static %}
+
+    <div class="container" style="margin-top: 4rem; ">
+
+        <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+            </ol>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{% static 'imagenes/consultorio1.jpg' %}" class="d-block w-100" alt="..." height="500px" width="100%">
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'imagenes/consultorio2.jpg' %}" class="d-block w-100" alt="..." height="500px" width="100%">
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'imagenes/consultorio3.jpg' %}" class="d-block w-100" alt="..." height="500px" width="100%">
+                </div>
+            </div>
+
+            <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Siguiente</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="album py-5 bg-light">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h2 class="card-text"><i class="fa fa-users"></i> Pacientes</h2>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a href="/base/paciente/" class="btn btn-sm btn-outline-info">Ir a Modulo <i class="fa fa-arrow-circle-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h2 class="card-text"><i class="fa fa-user-md"></i> Doctores</h2>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a href="/base/doctor/" class="btn btn-sm btn-outline-info">Ir a Modulo <i class="fa fa-arrow-circle-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h2 class="card-text"><i class="fa fa-calendar"></i> Horarios</h2>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a href="/base/horario/" class="btn btn-sm btn-outline-info">Ir a Modulo <i class="fa fa-arrow-circle-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h2 class="card-text"><i class="fa fa-file-medical-alt"></i> Signos Vitales</h2>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a href="/base/signos/" class="btn btn-sm btn-outline-info">Ir a Modulo <i class="fa fa-arrow-circle-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h2 class="card-text"><i class="fa fa-medkit"></i> Citas</h2>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a href="/base/citas/" class="btn btn-sm btn-outline-info">Ir a Modulo <i class="fa fa-arrow-circle-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
+
+{% block jscript %}
+    <script>
+        $(function () {
+            ('.carousel').carousel()
+
+        })
+    </script>
+{% endblock %}
